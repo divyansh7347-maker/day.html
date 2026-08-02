@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#fbc2eb);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+    color:white;
+    text-align:center;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    font-size:2rem;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:65px;
+    margin-bottom:20px;
+    text-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.subtitle{
+    font-size:22px;
+    margin-bottom:35px;
+    max-width:700px;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.35s;
+    background:white;
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+#giftSection{
+    display:none;
+    padding:70px 10%;
+}
+
+.glass{
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+    padding:35px;
+    margin:40px auto;
+    max-width:850px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.card p{
+    line-height:1.9;
+    font-size:19px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.5s;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+.quotes{
+    margin-top:60px;
+}
+
+#quote{
+    font-size:22px;
+    margin-top:20px;
+    min-height:60px;
+}
+
+.giftBox{
+    font-size:120px;
+    margin:40px;
+    animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-18px);
+    }
+}
+
+#surprise{
+    margin-top:20px;
+}
+
+#musicBtn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    font-size:25px;
+}
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.heart{
+    position:absolute;
+    color:#fff;
+    font-size:25px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-10vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+.card p{
+    font-size:17px;
+}
+
+.gallery img{
+    height:220px;
+}
+
+}
